@@ -1,5 +1,5 @@
 import { Box, Button, Stack } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 
 const App: React.FC = () => {
@@ -12,26 +12,25 @@ const App: React.FC = () => {
     setItems( input.split("\n"))
   };
 
-  const incrementIndex = () => {
+  const incrementIndex = useCallback(() => {
 
     setIndex(s => s === items.length-2 ? 0 : s + 1)
-  }
+  }, [setIndex, items])
 
 
-  const handleLeft = () => {
-    
-
+  const handleLeft = useCallback(() => {
     const copy = [...items]
     const temp = copy[index]
     copy[index] = copy[index+1]
     copy[index+1] = temp 
     setItems(copy);
     incrementIndex()
-  };
+  }, [setItems, incrementIndex, items, index])
 
-  const handleRight = () => {
+  const handleRight = useCallback(() => {
     incrementIndex()
-  };
+  }, [incrementIndex])
+
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
