@@ -9,7 +9,7 @@ const App: React.FC = () => {
 
 
   const handleSubmit = () => {
-    setItems( input.split("\n"))
+    setItems( input.split("\n").reverse())
   };
 
   const incrementIndex = useCallback(() => {
@@ -62,24 +62,22 @@ const App: React.FC = () => {
       <br/>
       <br/>
       {items.length > 0 && (
-        <div>
-          <div>
-            {items[index]} or {items[index+1]}
-          </div>
-          <br/>
+        <Box sx={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column"}}>
           <Stack direction={"row"} spacing={2}>
-            <Button variant="contained" onClick={handleLeft}>Left</Button>
-            <Button variant="contained" onClick={handleRight}>Right</Button>
+            <Button variant="contained" onClick={handleLeft}>{items[index]}</Button>
+            <p>or</p>
+            <Button variant="contained" onClick={handleRight}>{items[index+1]}</Button>
           </Stack>
+          <p>Press left or right arrow keys on desktop</p>
           
-        </div>
+        </Box>
       )}
       
       {items.length > 0 && (
         <div>
           <p>Your Rankings: </p>
           <ol>
-          {items.map((i, index) => <li key={i}>{i}</li>)}
+          {[...items].reverse().map((i, index) => <li key={i}>{i}</li>)}
           </ol>
           
         </div>)}
