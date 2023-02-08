@@ -34,8 +34,6 @@ const App: React.FC = () => {
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      console.log(`Key pressed: ${event.key}`);
-
       if (event.key === "ArrowLeft") {
         handleLeft()
       }
