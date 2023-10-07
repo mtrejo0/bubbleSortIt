@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bubbleSortIt/static/css/main.e6c13ad2.css",
+    "main.js": "/bubbleSortIt/static/js/main.8146dba7.js",
+    "static/js/787.859630b7.chunk.js": "/bubbleSortIt/static/js/787.859630b7.chunk.js",
+    "index.html": "/bubbleSortIt/index.html",
+    "main.e6c13ad2.css.map": "/bubbleSortIt/static/css/main.e6c13ad2.css.map",
+    "main.8146dba7.js.map": "/bubbleSortIt/static/js/main.8146dba7.js.map",
+    "787.859630b7.chunk.js.map": "/bubbleSortIt/static/js/787.859630b7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.8146dba7.js"
+  ]
+}
