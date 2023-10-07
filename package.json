@@ -1,5 +1,6 @@
 {
-  "name": "free-write-app",
+  "name": "bubble-sort-it",
+  "homepage": "https://mtrejo0.github.io/bubbleSortIt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
